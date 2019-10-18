@@ -70,10 +70,12 @@
                         </div>
                         #end
                     </div>
-                    <button href="javascript:;" id="zh-load-more" type = "button" data-method="next" class="zg-btn-white zg-r3px zu-button-more" style="">更多</button></div>
+                    #if($vos)
+                    <button href="javascript:;" id="load-more-question" data-offset="${vos.size()}" type = "button" data-method="next" class="zg-btn-white zg-r3px zu-button-more">更多</button></div>
+                    #end
             </div>
         </div>
     </div>
 #parse("js.html")
-<script type="text/javascript" src="/scripts/main/site/detail.js"></script>
+<script type="text/javascript" src="/scripts/main/site/index.js"></script>
 #parse("footer.html")

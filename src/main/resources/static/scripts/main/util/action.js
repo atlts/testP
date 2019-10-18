@@ -7,7 +7,8 @@
         unFollowUser: fUnFollowUser,
         followQuestion: fFollowQuestion,
         unFollowQuestion: fUnFollowQuestion,
-        post: fPost
+        post: fPost,
+        fGetQuestions: fGetQuestions
     });
 
     /**
@@ -118,6 +119,25 @@
         that.post({
             url: '/unfollowQuestion',
             data: {questionId: oConf.questionId},
+            call: oConf.call,
+            error: oConf.error,
+            always: oConf.always
+        });
+    }
+
+    /**
+     * 获取问题
+     * @param offset
+     * @param limit
+     */
+    function fGetQuestions(oConf) {
+        var that = this;
+        that.post({
+            url: '/getQuestions',
+            data: {
+                offset: oConf.offset,
+                limit: oConf.limit
+            },
             call: oConf.call,
             error: oConf.error,
             always: oConf.always
