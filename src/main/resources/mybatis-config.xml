@@ -19,6 +19,6 @@
 
     <!-- Continue going here -->
     <mappers>
-        <mapper resource="com.nowcoder.dao/QuestionDAO.xml"></mapper>
+        <mapper resource="com.testP.dao/QuestionDAO.xml"></mapper>
     </mappers>
 </configuration>
