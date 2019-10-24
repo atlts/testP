@@ -20,7 +20,7 @@
 
     function fMore(e) {
         let btn = e.target;
-        let offset = btn.dataset.offset;
+        let offset = +btn.dataset.offset;
         Action['fGetQuestions']({
             offset: offset,
             limit: 10,
@@ -46,7 +46,7 @@
                             <meta itemprop="ZReactor" data-id="389034" data-meta="{&quot;source_type&quot;: &quot;promotion_answer&quot;, &quot;voteups&quot;: 4168, &quot;comments&quot;: 69, &quot;source&quot;: []}">
                             <div class="feed-item-inner">
                                 <div class="avatar">
-                                    <a title="${user.name}" data-tip="p$t$amuro1230" class="zm-item-link-avatar" target="_blank" href="https://nowcoder.com/people/amuro1230">
+                                    <a title="${user.name}" data-tip="p$t$amuro1230" class="zm-item-link-avatar" target="_blank" href="http://127.0.0.1:8080/user/${user.id}">
                                         <img src="${user.headUrl}" class="zm-item-img-avatar"></a>
                                 </div>
                                 <div class="feed-main">

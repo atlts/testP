@@ -25,6 +25,7 @@ public class QuestionService {
         question.setTitle(sensitiveService.filter(question.getTitle()));
         return questionDAO.addQuestion(question) > 0 ? question.getId() : 0;
     }
+
     public List<Question> getLatestQuestions(int userId,int offset,int limit){
         return questionDAO.selectLatestQuestions(userId,offset,limit);
     }
